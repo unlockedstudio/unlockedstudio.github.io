@@ -80,7 +80,6 @@ body{
     color: #000;
     font-weight: bold;
 }
-/**/
 h1{
     color: rgb(60, 255, 0);
     font-family: "Outfit", sans-serif;
@@ -138,9 +137,6 @@ h1{
         padding-right: 0%;
     }
 }
-
-
-
 ::-webkit-scrollbar {
     background-color: black;
     width: 10px;

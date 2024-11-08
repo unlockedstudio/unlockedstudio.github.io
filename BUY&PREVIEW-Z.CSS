@@ -70,7 +70,6 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
   .buttons {
     margin-top: 15px;
   }
@@ -95,9 +94,7 @@
   .preview-button:hover {
     background-color: #1c88fa;
   }
-  
-  
-  
+   
   /* Responsive Styles for Tablets */
   @media (max-width: 768px) {
     .container-sell {

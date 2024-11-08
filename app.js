@@ -4,7 +4,6 @@ let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let dots = document.querySelectorAll('.slider .dots li');
-
 let lengthItems = items.length - 1;
 let active = 0;
 next.onclick = function(){
@@ -25,8 +24,6 @@ function reloadSlider(){
 
     clearInterval(refreshInterval);
     refreshInterval = setInterval(()=> {next.click()}, 9000);
-
-    
 }
 
 dots.forEach((li, key) => {
@@ -35,6 +32,7 @@ dots.forEach((li, key) => {
          reloadSlider();
     })
 })
+
 window.onresize = function(event) {
     reloadSlider();
 };
@@ -43,7 +41,6 @@ window.onresize = function(event) {
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
   });
-
 /*Disable Keyboard Shortcuts (F12, Ctrl+Shift+I, Ctrl+U)*/
 document.addEventListener('keydown', function(e) {
     // Disable F12 (Inspect)
@@ -59,12 +56,9 @@ document.addEventListener('keydown', function(e) {
       e.preventDefault();
     }
   });
-
   function goBack() {
     window.history.back(); /* Navigates back to the previous page */
 }
-
-
 
 // Function to open modal with the clicked image
 function openModal(element) {
@@ -74,12 +68,10 @@ function openModal(element) {
   modal.style.display = "flex";
   modalImg.src = element.src;
 }
-
 // Function to close the modal
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
-
 
 // JavaScript for opening and closing the popup
 function openPopup() {
@@ -105,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }, 2000); // Adjust the delay (2000ms = 2 seconds)
 });
-
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzBBCbPSUxF2dPkkcFkrsLlr0KH3r7VNhP6zXrOhP3QrcHxQ5JRxcpG4hS8Mim-h5--/exec'; // Replace 'Your URL will be here' with the URL of your Google Apps Script
 const form = document.forms['submit-to-google-sheet'];

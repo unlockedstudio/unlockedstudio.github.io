@@ -16,11 +16,8 @@ body{
     align-items: center;
     width: 100%;
     height: 100vh;
-    
 }
-/* Container Styling */
 
-/* Container Styling */
 .contactform {
     max-width: 600px;
     margin: 50px auto;
@@ -29,7 +26,6 @@ body{
     border-radius: 10px;
     border: none;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    
 }
 
 .contactform h1 {
@@ -50,7 +46,6 @@ body{
     flex-direction: column;
     gap: 15px;
 }
-
 /* Social Media Button Styling */
 .social-buttons {
     display: flex;
@@ -58,7 +53,6 @@ body{
     gap: 10px;
     margin-bottom: 20px;
 }
-
 .social-buttons button {
     padding: 10px 15px;
     font-size: 1rem;
@@ -101,7 +95,6 @@ body{
     cursor: pointer;
     transition: transform 0.2s ease;
 }
-
 /* Input Focus State */
 .contactform input[type="text"]:focus,
 .contactform input[type="email"]:focus,
@@ -110,7 +103,6 @@ body{
     border-color: #4CAF50; /* Customize to preferred accent color */
     outline: none;
 }
-
 /* Button Styling */
 .contactform button[type="submit"] {
     padding: 12px;

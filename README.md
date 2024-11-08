@@ -1,6 +1,6 @@
 # Unlocked Studio - Website
 
-**Author**: Md. Arman Hossen Ripon
+**Developer**: Md. Arman Hossen Ripon
 
 ---
 
