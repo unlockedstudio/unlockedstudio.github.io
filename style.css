@@ -75,12 +75,15 @@ nav #home-link{
 nav svg{
     fill: var(--text-color);
 }
+
 .close-sidebar-button,
 .open-sidebar-button{
     background-color: red;
     border-radius: 5px;
     margin: 7px;
 }
+
+
 #sidebar-active{
     display: none;
 }
@@ -211,6 +214,7 @@ width: 30px;
 }
 
 /*end of slider css*/
+
 .title_of_comics{
     font-size: 24px;
     color: white;
@@ -219,7 +223,9 @@ width: 30px;
     justify-content: center;
 }
 
+
 /* ---- course ---- */
+
 .course{
 padding-top: 50px;
 margin: auto;
@@ -353,6 +359,7 @@ footer{
     border-top-left-radius: 25px;
     border-top-right-radius: 25px ;
     padding-left: 30px;
+    bottom: 0px;
 }
 .square{
     font-family: "Outfit", sans-serif; 
@@ -622,10 +629,12 @@ color: white;
     transition: opacity 0.3s ease;
 }
 
+
 .ac:hover .read-more-btn {
     display: block;
     opacity: 1;
 }
+
 
 .close-btn {
     position: absolute;
