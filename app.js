@@ -76,12 +76,9 @@ function closeModal() {
 // JavaScript for opening and closing the popup
 function openPopup() {
   document.getElementById("popupOverlay").style.display = "flex";
-  document.body.style.overflow = "hidden"; // Disable scroll when popup is open
 }
-
 function closePopup() {
   document.getElementById("popupOverlay").style.display = "none";
-  document.body.style.overflow = "auto"; // Re-enable scroll when popup is closed
 }
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzBBCbPSUxF2dPkkcFkrsLlr0KH3r7VNhP6zXrOhP3QrcHxQ5JRxcpG4hS8Mim-h5--/exec'; // Replace 'Your URL will be here' with the URL of your Google Apps Script
