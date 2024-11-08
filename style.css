@@ -1018,12 +1018,3 @@ a{
     border-radius: 5px;
     cursor: pointer;
 }
-
-.contactmebro{
-    background-image: url('images/servicebg.png');
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px); /* Blur effect for glassmorphism */
-    background-position: contain;
-    justify-content: center;
-    align-items: center;
-}
