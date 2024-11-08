@@ -18,7 +18,6 @@ body{
     height: 100vh;
     overflow-x: hidden;
 }
-
 .contactform {
     max-width: 600px;
     margin: 50px auto;
@@ -28,6 +27,124 @@ body{
     border: none;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
+
+/* Existing navbar styles */
+nav {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.unlocked_logo {
+    width: 145px;    
+    position: absolute;
+    left: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+    font-size: 18px;
+    font-weight: 450;
+}
+
+nav a:hover {
+    background-color: rgb(255, 0, 0);
+    border-radius: 8px;
+}
+
+nav a.active {
+    color: red;
+}
+
+nav a.active:hover {
+    color: rgb(255, 255, 255);
+}
+
+nav #home-link {
+    margin-left: auto;
+}
+
+.close-sidebar-button, .open-sidebar-button {
+    background-color: red;
+    border-radius: 5px;
+    margin: 7px;
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .links-container {
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        width: 50%;
+        z-index: 10000;
+        background-color: #000000;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: right 0.75s ease-out;
+    }
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button {
+        display: block;
+    }
+    #sidebar-active:checked ~ .links-container {
+        padding: 10px;
+        right: 0; /* Slide in when active */
+    }
+    #sidebar-active:checked ~ #overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.5); /* Optional overlay */
+    }
+    /* Hide overlay when sidebar is not active */
+    #overlay {
+        display: none;
+    }
+    #sidebar-active:checked ~ #overlay {
+        display: block; /* Show overlay only when sidebar is active */
+    }
+}
+
+
 
 .contactform h1 {
     text-align: center;
