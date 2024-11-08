@@ -84,20 +84,6 @@ function closePopup() {
   document.body.style.overflow = "auto"; // Re-enable scroll when popup is closed
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Wait a moment to display the loading screen, then fade it out
-  setTimeout(() => {
-    const loadingScreen = document.getElementById("loading-screen");
-    loadingScreen.style.opacity = 0;
-
-    // Hide the loading screen after the fade-out transition completes
-    loadingScreen.addEventListener("transitionend", () => {
-      loadingScreen.style.display = "none";
-      document.getElementById("content").style.display = "block";
-    });
-  }, 2000); // Adjust the delay (2000ms = 2 seconds)
-});
-
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzBBCbPSUxF2dPkkcFkrsLlr0KH3r7VNhP6zXrOhP3QrcHxQ5JRxcpG4hS8Mim-h5--/exec'; // Replace 'Your URL will be here' with the URL of your Google Apps Script
 const form = document.forms['submit-to-google-sheet'];
 form.addEventListener('submit', e => {
