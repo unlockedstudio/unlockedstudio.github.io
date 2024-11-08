@@ -171,7 +171,18 @@
             <button class="close-btn" onclick="closePopup()">Close</button>
         </div>
     </div>
-        
+    <script>
+    // JavaScript for opening and closing the popup
+    function openPopup() {
+    document.getElementById("popupOverlay").style.display = "flex";
+    document.body.style.overflow = "hidden"; // Disable scroll when popup is open
+    }
+
+    function closePopup() {
+    document.getElementById("popupOverlay").style.display = "none";
+    document.body.style.overflow = "auto"; // Re-enable scroll when popup is closed
+    }
+    </script>        
     <script src="app.js"></script>
     <script src="script_comics.js"></script>   
 </body>
