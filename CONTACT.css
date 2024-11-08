@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+body{
+    background-image: url('images/servicebg.png');
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px); /* Blur effect for glassmorphism */
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
+}
+/* Container Styling */
+
+/* Container Styling */
+.contactform {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.212); /* Light transparent white background */
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    
+}
+
+.contactform h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+.contactform h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+/* Form Styling */
+.contactform form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Social Media Button Styling */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-buttons button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.social-buttons button:hover {
+    transform: scale(1.05);
+}
+
+.social-buttons a button:nth-child(1) { background-color: #1da1f2; } 
+.social-buttons a button:nth-child(2) {  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.social-buttons a button:nth-child(3) { background-color: #4FCE5D; } 
+
+.instagram-button {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+.instagram-button:hover {
+    transform: scale(1.05);
+}
+.instagram-button:active {
+    transform: scale(0.98);
+}
+
+/* Input Fields */
+.contactform input[type="text"],
+.contactform input[type="email"],
+.contactform select,
+.contactform textarea {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Input Focus State */
+.contactform input[type="text"]:focus,
+.contactform input[type="email"]:focus,
+.contactform select:focus,
+.contactform textarea:focus {
+    border-color: #4CAF50; /* Customize to preferred accent color */
+    outline: none;
+}
+
+/* Button Styling */
+.contactform button[type="submit"] {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contactform button[type="submit"]:hover {
+    background-color: #2aaeeb;
+    transform: scale(1.05);
+}
+.contactform button[type="submit"]:hover:active {
+    background-color: red;
+}
+
+/* Textarea Styling */
+.contactform textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contactform {
+        margin: 20px;
+        width: 90%;
+    }
+    .contactform h1{
+        font-size: 1.8rem;
+    }
+    .contactform h2{
+        font-size: 2.1rem;
+    }
+    .contactform button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+/* Optional Styling for Better Aesthetics */
+.contactform input[type="text"]::placeholder,
+.contactform input[type="email"]::placeholder,
+.contactform textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+/* Modal background styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; /* Appears above other elements */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+}
+
+/* Modal content box */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-content button:hover {
+  background-color: #36d33e;
+}

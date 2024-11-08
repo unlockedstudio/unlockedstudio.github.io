@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root{
+    --color-1: #0f1016;
+    --text-color: #f0f0f0;
+    --accent-color: #ff000d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+html{
+    font-family: "Outfit", sans-serif;
+}
+
+body{
+    background-color: rgb(22, 22, 22);
+}
+
+/*PREMIUM button desing*/
+.back-button{
+    font-size: 18px;
+    top: auto;
+    border: none;
+    outline: none;
+    color:#FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.back-button::after{
+    content: "";
+    z-index: -1;
+    position: fixed;
+    background-color: #000000;
+}
+/*glow*/
+.back-button::before{
+   content: ""; 
+   background:linear-gradient(
+    45deg,
+    #ff0000,
+    #002bff,
+    #ff00c8,
+    #ff0000
+   );
+   position: absolute;
+   top: -2px;
+   left: -2px;
+   background-size: 600%;
+   z-index: -1;
+   width: calc(100% + 4px);
+   height: calc(100% + 4px);
+   filter: blur(8px);
+   animation: glowing 20s linear infinite;
+   transition: opacity .3s ease-in-out;
+   border-radius: 10px;
+   opacity: 0;
+}
+
+@keyframes glowing {
+    0%{background-position: 0 0;}
+    50%{background-position: 500% 0;}
+    100%{background-position: 0 0;}
+    
+}
+/*hover*/
+.back-button:hover::before{
+    opacity: 1;
+}
+
+.back-button:active::after{
+    background:transparent;
+}
+.back-button:active{
+    color: #000;
+    font-weight: bold;
+}
+/**/
+h1{
+    color: rgb(60, 255, 0);
+    font-family: "Outfit", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    background-image: url('images/image\ 1.1.png');
+    left: 50%;    
+}
+.pdfstyle {
+    width: 100%; 
+    height: 87vh; 
+    border: none; 
+    box-shadow: 0 14px 18px rgb(0, 0, 0); /* Add a subtle shadow */
+    padding-left: 20%;
+    padding-right: 20%;
+    background-image: url('images/image\ 1.1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pdfstyle-agentZ{
+    width: 100%; 
+    height: 87vh; 
+    border: none; 
+    padding-left: 20%;
+    padding-right: 20%;
+    background-image: url('images/image\ 333.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#az{  
+    color: red;
+    background-image: url('images/image\ 333.png');
+}
+.agentz-bg-body{
+   background-color: #3e0000;
+} 
+
+/* Responsive for larger screens (PC) */
+@media (max-width: 720px) {
+    h1{
+        font-size: 23px;
+    }
+    
+    .pdfstyle {
+        height: 75vh; /* Maintain height for larger screens */
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .pdfstyle-agentZ {
+        height: 72vh; /* Maintain height for larger screens */
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+
+
+
+::-webkit-scrollbar {
+    background-color: black;
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    /*hwb(120 13% 15%);*/
+    border-radius: 100px;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+  @media (max-width:560px) {
+    .sm{
+        top:  120px;
+    }
+    h2{
+        font-size: 32px; 
+    }
+  }
+  @media (max-width:490px) {
+    
+    h2{
+        font-size: 31px; 
+    }
+}
